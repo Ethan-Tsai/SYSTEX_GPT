@@ -4,25 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
     <title>SYSTEX GPT競賽-高雄發大財</title>
 </head>
 
 <body>
 
+
     <div>
+        <h1>SYSTEX-GPT競賽</h1>
+        <h2>member: 蔡尚宸, 曾旭宏</h2>
+    </div>
+
+
+    <!-- <div>
         <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
             <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFrfv6bL5c&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
-        </div>
-    </div>
 
+        </div>
+    </div> -->
+
+    <button onclick="expand()">
+        展開簡報
+    </button>
+    <div style="display: none;" id="ppt">
+        <img src="./pic/1.jpg" data-src="./pic/1.jpg" class="lazyload">
+        <img src="./pic/2.jpg" data-src="./pic/2.jpg" class="lazyload">
+        <img src="./pic/3.jpg" data-src="./pic/3.jpg" class="lazyload">
+        <img src="./pic/4.jpg" data-src="./pic/4.jpg" class="lazyload">
+        <img src="./pic/5.jpg" data-src="./pic/5.jpg" class="lazyload">
+
+        <style>
+            img {
+                width: 100%;
+            }
+        </style>
+        <script type="text/javascript">
+            let images = document.querySelectorAll('img.lazyload');
+            lazyload(images);
+        </script>
+
+    </div>
     <h3>
-        <a href="./stage1/SYSTEX-GPT競賽.pdf" target="_blank">查看初賽檔案</a>
+        <a href="./stage1/SYSTEX-GPT競賽.pdf" target="_blank">簡報PDF檔案</a>
     </h3>
 
 
 </body>
 
 </html>
+<script>
+    function expand() {
+        var x = document.getElementById("ppt");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
